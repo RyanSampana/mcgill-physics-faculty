@@ -1,0 +1,102 @@
+/* main.css */
+.display-3{
+    text-align: center;
+}
+
+.vertical-center {
+  height:100%;
+  width:100%;
+
+  text-align: center;  /* align the inline(-block) elements horizontally */
+  font: 0/0 a;         /* remove the gap between inline(-block) elements */
+}
+
+.vertical-center:before {    /* create a full-height inline block pseudo=element */
+  content: " ";
+  display: inline-block;
+  vertical-align: middle;    /* vertical alignment of the inline element */
+  height: 100%;
+}
+
+.vertical-center > .container {
+  max-width: 100%;
+
+  display: inline-block;
+  vertical-align: middle;  /* vertical alignment of the inline element */
+                           /* reset the font property */
+  font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .vertical-center:before {
+    height: auto;
+    /* Or */
+    display: none;
+  }
+}
+
+body {
+  background-color: #ddd;
+  font-size: 16px;
+  margin: 0;
+}
+
+main {
+  padding: 0;
+  margin: 0 auto;
+}
+
+.avatar{
+    display: inline-block;
+    width: 160px;
+    height: 160px;
+    border-radius: 160px;
+    background-repeat: no-repeat;
+    background-position: : center center;
+    background-size: cover;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    max-width: 100%;
+}
+
+section {
+  padding: 0;
+  margin: 0;
+  min-width: 300px;
+  border-radius: 3px;
+  background-color: white;
+  text-align: center;
+  display: inline-block;
+  margin: 0 10px 10px 10px;
+}
+
+/*
+.profile img {
+  border-radius: 80px;
+  width: 10%;
+}
+*/
+
+h2 {
+  font-size: 1.7em;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+.person-title {
+  font-size: 1em;
+  color: #aaa;
+  margin: 0;
+  padding: 0;
+}
+
+.person-email {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
